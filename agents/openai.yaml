@@ -1,0 +1,14 @@
+interface:
+  display_name: 纸感丙烯照片封面
+  short_description: 将照片提炼成高留白、四色以内的纸感丙烯封面插画
+  default_prompt: Use $paper-acrylic-photo-cover to transform my uploaded photo into
+    the signature paper-acrylic cover style.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  allow_implicit_invocation: true
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
