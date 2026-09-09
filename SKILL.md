@@ -1,70 +1,162 @@
 ---
 name: paper-acrylic-photo-cover
-description: Transform uploaded photographs into quiet, minimalist paper-textured acrylic cover illustrations, either as a standalone 4:3 landscape artwork or a strict 1:1 photo-and-illustration vertical poster. Use when the user asks for the established paper-acrylic, picture-book, independent-publication, poetic-poster, or “刚才那个画风” treatment.
+description: Transform uploaded photographs into quiet, minimalist paper-textured acrylic cover illustrations with fuller matte color blocks, either as a standalone 4:3 landscape artwork or a strict 50/50 upper-photo and lower-illustration 3:4 vertical poster.
 ---
 
 # Paper Acrylic Photo Cover
 
-Use the built-in image-generation workflow to derive an illustration from each uploaded photograph. Inspect every source image before prompting. Treat the photograph as the subject reference, not merely a loose mood reference.
+Use the built-in image-generation workflow to transform uploaded photographs into the established paper-acrylic cover style.
+
+This is the original, fuller and more solid version. Do not apply the pale, broken, highly exposed-paper treatment of the separate `airy-paper-acrylic-cover` skill.
 
 ## Choose the output mode
 
-- **Standalone illustration:** use when the user asks for an illustration only or a horizontal banner. Default to landscape 4:3.
-- **Photo + illustration poster:** use when the user asks to retain the original photograph or divide the image into two parts. Default to portrait 3:4, with a perfectly straight midpoint boundary and exactly 50% photograph above / 50% illustration below.
-- Follow an explicitly requested aspect ratio or layout instead of these defaults.
-- For multiple photos, create one independent output per photo. Never combine unrelated photos into a collage unless explicitly requested.
+- **Photo + illustration poster:** Default mode when the user does not specify a layout. Use portrait 3:4 with a perfectly straight midpoint boundary: exactly 50% original photograph above and 50% illustration below.
+- **Standalone illustration:** Use only when the user explicitly asks for an illustration without the original photograph, a horizontal banner, or “不用上下对比”. Default to landscape 4:3.
+- Follow any explicitly requested aspect ratio or layout.
+- For multiple photographs, create one independent output for each photograph. Do not combine unrelated photographs into a collage unless explicitly requested.
 
-## Read the photograph before simplifying
+## Read the photograph
 
-Identify the smallest set of features that makes the moment recognizable:
+Inspect every source photograph before generating.
 
-1. Main subject and distinctive silhouette.
-2. Specific pose, gesture, direction of movement or interaction.
-3. Essential spatial relationship between the subject and one or two nearby objects.
-4. Emotional tone of the moment.
-5. Up to four source-derived colors.
+Identify and preserve:
 
-Preserve unusual actions over generic appearance. For example, a cat balancing with paws on a chair arm should remain that action rather than becoming a generic sitting cat.
+1. The principal subject and recognizable silhouette.
+2. The exact pose, gesture, action or direction of movement.
+3. The relationship between the subject and essential nearby objects.
+4. Important architectural or environmental forms required to recognize the scene.
+5. The emotional atmosphere.
+6. No more than four principal colors derived from the photograph.
 
-## Illustration art direction
+Preserve distinctive actions instead of converting the subject into a generic pose.
 
-- Place the complete illustrated subject cluster at roughly 10–20% of the total applicable illustration area. Keep generous uninterrupted negative space on every side.
-- Use rough white, ivory or pale handmade paper with visible fibers and restrained grain.
-- Build the subject with a few clear, complete acrylic or gouache flat-color blocks. Use thin, slightly unstable hand-drawn marks only to clarify structure.
-- Simplify details aggressively while keeping the original subject immediately identifiable.
-- Retain slight paint drag, dry-brush grain, tiny smudges and irregular pigment edges. The result must not look like smooth vector or glossy digital art.
-- Use no more than four principal colors, sampled conceptually from the source. Paper color may act as one color or as negative space.
-- Include at most one to three minimal environmental cues. Do not reconstruct the full room, street, landscape or background.
-- Aim for a quiet picture-book cover, independent art publication, travel notebook or natural-observation page: gentle, airy, playful but not childish.
+## Original acrylic art direction
+
+- Keep the illustrated subject cluster relatively small, normally around 10–20% of the applicable illustration area.
+- Surround it with generous negative space.
+- Use warm-white, ivory or lightly textured handmade paper.
+- Build the subject with clear, matte and substantially filled acrylic or gouache color blocks.
+- Colors should be restrained and harmonious but must remain visible, complete and sufficiently solid.
+- Use slightly stronger color density and contrast than the airy version.
+- Keep the paper texture visible mainly in the background, along painted edges and through subtle dry-brush marks.
+- Do not allow excessive blank paper to break through the principal subject.
+- Use thin, slightly unstable hand-drawn lines only to clarify important structure.
+- Preserve subtle paint drag, uneven pigment density, irregular edges and handmade imperfections.
+- Avoid glossy digital rendering and perfectly smooth vector shapes.
+- Use no more than four principal colors extracted conceptually from the source photograph.
+- Simplify details while keeping the original theme immediately recognizable.
+
+The result should resemble a quiet picture-book cover, an independent art publication, a poetic paper poster or a travel notebook illustration.
+
+It should remain gentle and restrained, but fuller, more graphic and more materially painted than the airy edition.
+
+## Environment and architecture
+
+Use only the environmental information required to recognize the original scene.
+
+Do not reconstruct every background detail. However, do not impose a fixed limit on environmental elements when an important building, staircase, chair, vehicle, umbrella, tree or room structure is essential to the scene.
+
+Preserve enough of an important building or spatial structure to communicate:
+
+- Its main massing and silhouette.
+- Its relationship with the subject.
+- The direction of stairs, walls, windows or balconies.
+- The original viewing angle.
+- The emotional atmosphere of the location.
+
+Simplify these elements into controlled flat shapes and loose structural lines rather than removing them completely.
+
+## People and faces
+
+Preserve the person’s pose, gesture, clothing silhouette, hairstyle and relationship with the environment.
+
+Faces must remain highly simplified. When facial features are visible, use only:
+
+- Two dots or short marks for the eyes.
+- One tiny line or mark for the nose.
+- One short line for the mouth.
+
+Do not generate realistic portrait details, detailed eyes, skin texture or carefully rendered facial anatomy.
+
+## Animals
+
+Preserve the animal’s:
+
+- Species and characteristic silhouette.
+- Body posture.
+- Essential markings.
+- Ear and tail shape.
+- Expression or direction of attention.
+- Interaction with nearby people or objects.
+
+Use complete matte color shapes rather than realistic fur rendering.
 
 ## Photo-region invariants
 
 In photo + illustration mode:
 
-- Keep the upper half recognizably photographic with natural light, realistic texture, original identity, pose, structure and color atmosphere.
-- Allow subtle editorial color grading and natural crop/reframing only.
-- Never repaint, stylize, stretch, distort, beautify, change anatomy or invent content in the photograph.
-- If necessary, extend only unobtrusive background areas to fit the frame; never extend or deform the subject.
+- Keep the upper half as the uploaded original photograph.
+- Preserve its photographic realism, natural light, identity, pose, color atmosphere and complete composition.
+- Fit the complete photograph into the upper half whenever possible.
+- If the aspect ratio does not match, use restrained neutral padding or unobtrusive background extension instead of cropping the main subject.
+- Never repaint, stylize, beautify, stretch, distort or change the anatomy of the photographic subject.
+- Do not invent objects or people in the photograph.
+- The boundary between the two halves must be perfectly straight and positioned at the exact vertical midpoint.
 
-## Text and marks
+## Text and logos
 
-Default to no added text, logos, captions, watermarks or symbols. Add small text only when the user explicitly asks for it, using exact supplied wording or clearly photo-grounded wording. Never reproduce incidental brand marks as decorative elements.
+Do not add any text, title, date, location, caption, logo, watermark or symbol that is not already present in the source photograph.
+
+Preserve existing text or a recognizable logo only when it is essential to the original subject or the user explicitly requests it.
 
 ## Avoid
 
-Avoid photographic rendering in the illustration, photo tracing, pure line art, outline-only drawings, crowded composition, oversized subjects, full backgrounds, more than four colors, complex perspective, dense shadows, fine cross-hatching, detailed fur, watercolor bleeding, colored-pencil or crayon texture, heavy oil paint, commercial cartoon styling, ecommerce styling, templates, 3D rendering, glossy digital finish, anime, chibi, exaggerated cuteness, AI-style decorative overworking, invented objects and anatomical errors.
+Avoid:
+
+- Pale, washed-out or nearly invisible subjects.
+- Excessively broken pigment inside the main subject.
+- Excessive exposed paper passing through the subject.
+- The highly airy treatment belonging to `airy-paper-acrylic-cover`.
+- Photorealistic rendering in the illustration.
+- Direct photo tracing.
+- Pure line art or outline-only drawings.
+- Oversized subjects.
+- Crowded compositions.
+- Full realistic backgrounds.
+- More than four principal colors.
+- Complex perspective details.
+- Dense shadows or fine cross-hatching.
+- Detailed fur or realistic skin.
+- Watercolor bleeding.
+- Colored-pencil or crayon texture.
+- Heavy oil-paint impasto.
+- Commercial cartoon or ecommerce styling.
+- Anime or chibi styling.
+- 3D rendering.
+- Glossy digital finishes.
+- Smooth vector illustration.
+- Excessive cuteness.
+- Invented objects, text or logos.
+- AI-style decorative overworking.
 
 ## Execution and review
 
-Use the image-generation skill and built-in image tool. State the source image's role and the chosen mode in the prompt. After generation, inspect the result for:
+Use the image-generation workflow and state the selected output mode clearly in the generation prompt.
 
-- requested aspect ratio and exact split geometry;
-- preserved photographic invariants when applicable;
-- recognizable gesture and spatial relationship;
-- subject scale near 10–20%;
-- large negative space;
-- four colors or fewer;
-- visible paper/acrylic hand-made texture;
-- absence of unrequested text, logos and extra objects.
+After generation, verify:
 
-If one of these fails materially, make one targeted regeneration. Save the accepted image non-destructively and report its path.
+- Correct requested aspect ratio.
+- Exact 50/50 division when using poster mode.
+- Original photograph preserved in the upper half.
+- Recognizable subject, action and spatial relationship.
+- Important architecture or objects retained when required.
+- Simplified facial features.
+- Illustrated subject scale near 10–20%.
+- Generous negative space.
+- Four principal colors or fewer.
+- Fuller matte acrylic color blocks.
+- Visible paper and handmade texture.
+- No unrequested text, logos or invented objects.
+
+If a major requirement fails, perform one targeted regeneration.
